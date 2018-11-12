@@ -3,7 +3,14 @@ const app = new Koa()
 const router = require('koa-router')()
 const bodyParser = require('koa-bodyparser')
 const fs = require('fs')
+var cors = require('koa2-cors')
 var files = fs.readdirSync(__dirname + '/controllers');
+
+
+/**
+ * router动态加入cantrollers js文件
+ */
+
 
 var js_files = files.filter((f) => {
     return f.endsWith('.js');
@@ -24,6 +31,11 @@ for (let file of js_files) {
     }
 }
 
+
+/**
+ * 导入第三方库
+ */
+app.use(cors())
 app.use(bodyParser())
 app.use(router.routes());
 

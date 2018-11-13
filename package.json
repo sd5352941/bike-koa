@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "koa2-cors": "^2.0.6"
+    "koa2-cors": "^2.0.6",
+    "monk": "^6.0.6"
   }
 }

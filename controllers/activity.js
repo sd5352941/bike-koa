@@ -1,6 +1,6 @@
-const Monk = require('monk')
-const db = new Monk('localhost:27017/runoob').get('activityList');//链接到活动数据库
-var ObjectId = require('mongodb').ObjectID;
+// const db = new Monk('localhost:27017/runoob').get('activityList');
+const db = require('../mongo').db.get('activityList')//链接到活动数据库
+const ObjectId = require('mongodb').ObjectID;
 
 
 /**

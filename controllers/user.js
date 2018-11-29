@@ -7,7 +7,7 @@ const db = require('../mongo').db.get('userData')//链接到活动数据库
  */
 
 var addUser = async (ctx, next) => {
-    let params = {username: ctx.request.body.userName}
+    let params = {username: ctx.request.body.username}
     var body = {}
     await db.find(params).then(async res => {
         if (res.length === 0) {

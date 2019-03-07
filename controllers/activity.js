@@ -12,7 +12,7 @@ var getActivity = async (ctx, next) => {
     // 获取翻页信息
     let page = {
         limit: Number(ctx.query.pageSize),
-        skip: (ctx.query.pageNum - 1) * ctx.query.pageSize
+        skip: Number(ctx.query.pageNum)
     }
     await db.find({}, page).then(res => {
         ctx.response.body = {

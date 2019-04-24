@@ -3,6 +3,7 @@ const app = new Koa()
 const router = require('koa-router')()
 const bodyParser = require('koa-bodyparser')
 const fs = require('fs')
+const connectHistory = require('connect-history-api-fallback');
 var cors = require('koa2-cors')
 var files = fs.readdirSync(__dirname + '/controllers');
 
@@ -38,6 +39,19 @@ for (let file of js_files) {
 app.use(cors())
 app.use(bodyParser())
 app.use(router.routes());
+
+//vue-router mode history
+app.use(() => {
+    const middleware = connectHistory();
+    const noop = ()  => {
+
+    };
+
+    return async (ctx, next)=> {
+        middleware(ctx, null, noop);
+        await next();
+    };
+});
 
 
 // x-respogjgknse-time

@@ -1,9 +1,10 @@
 {
   "dependencies": {
-    "koa2-cors": "^2.0.6",
-    "monk": "^6.0.6",
+    "connect-history-api-fallback": "^1.6.0",
     "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0c",
-    "koa-bodyparser": "^4.2.1"
+    "koa2-cors": "^2.0.6",
+    "monk": "^6.0.6"
   }
 }

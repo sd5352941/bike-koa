@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a3d16500-9c93-4606-9b95-41f031e5ad85" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/activity.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/activity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+            <state relative-caret-position="1200">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
@@ -28,26 +29,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/activity.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+            <state relative-caret-position="250">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/activity.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/hello.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="32" />
+            <state relative-caret-position="175">
+              <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -109,16 +110,16 @@
         <option value="$PROJECT_DIR$/package-lock.json" />
         <option value="$PROJECT_DIR$/mongo.js" />
         <option value="$PROJECT_DIR$/controllers/login.js" />
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/controllers/user.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/controllers/activity.js" />
+        <option value="$PROJECT_DIR$/index.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="15" />
-    <option name="y" value="119" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1546" />
     <option name="height" value="833" />
   </component>
@@ -150,7 +151,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/bike/activity-Koa/package-lock.json" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../loginManage-express" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../myProject" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -206,11 +207,35 @@
       <workItem from="1549076237648" duration="599000" />
       <workItem from="1549338672305" duration="2074000" />
       <workItem from="1549685606906" duration="865000" />
+      <workItem from="1551934636424" duration="670000" />
+      <workItem from="1552038866635" duration="1205000" />
+      <workItem from="1552194095759" duration="678000" />
+      <workItem from="1552448327753" duration="702000" />
+      <workItem from="1553145414029" duration="1116000" />
+      <workItem from="1553501618573" duration="626000" />
+      <workItem from="1553818326901" duration="599000" />
+      <workItem from="1553933354483" duration="707000" />
+      <workItem from="1554127649072" duration="599000" />
+      <workItem from="1554177155463" duration="1227000" />
+      <workItem from="1554867813446" duration="605000" />
+      <workItem from="1554968203031" duration="599000" />
+      <workItem from="1555038785349" duration="655000" />
+      <workItem from="1555119998820" duration="1744000" />
+      <workItem from="1555209346745" duration="1801000" />
+      <workItem from="1555298372024" duration="1198000" />
+      <workItem from="1555403934007" duration="762000" />
+      <workItem from="1555472672754" duration="621000" />
+      <workItem from="1555487105496" duration="656000" />
+      <workItem from="1555511318148" duration="937000" />
+      <workItem from="1555513817359" duration="981000" />
+      <workItem from="1555746414972" duration="600000" />
+      <workItem from="1555905171930" duration="1218000" />
+      <workItem from="1555915892673" duration="864000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109384000" />
+    <option name="totallyTimeSpent" value="130754000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -222,22 +247,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12381454" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0800843" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32929516" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3286334" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286334" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4186551" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.30477223" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32893288" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3286334" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -276,24 +301,27 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/_koa2-cors@2.0.6@koa2-cors/dist/index.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/_connect-history-api-fallback@1.6.0@connect-history-api-fallback/lib/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+        <state relative-caret-position="1200">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="250">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/hello.js">
+    <entry file="file://$PROJECT_DIR$/controllers/activity.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="32" />
+        <state relative-caret-position="350">
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -325,10 +353,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/activity.js">
+    <entry file="file://$PROJECT_DIR$/controllers/hello.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+        <state relative-caret-position="175">
+          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
         </state>
       </provider>
     </entry>

@@ -1,7 +1,8 @@
 // const db = new Monk('localhost:27017/runoob').get('activityList');
 const db = require('../mongo').db.get('activityList')//链接到活动数据库
 const ObjectId = require('mongodb').ObjectID;
-
+const fs = require('fs')
+const path = require('path')
 
 /**
  * 获取活动列表
@@ -66,9 +67,32 @@ var addActivity = async (ctx, next) => {
     })
 }
 
+/**
+ * 活动封面上传
+ * @param ctx
+ */
+
+var uploadIMG = async (ctx, next) => {
+    const file = ctx.request.files.file
+    // 创建可读流
+    const reader = fs.createReadStream(file.path);
+    // 更改存放文件名
+    const fileName = new Buffer(file.name + new Date().getTime()).toString('base64')
+
+    let filePath = path.join(__dirname, '../public/upload/activityCover/') + fileName + `cover.jpg`;
+    const upStream = fs.createWriteStream(filePath);
+    reader.pipe(upStream);
+    ctx.response.body = {
+        code: 2000,
+        path: filePath,
+        msg:'添加图片成功'
+    }
+}
+
 
 module.exports = {
     'GET /activity/query': getActivity,
     'POST /activity/add': addActivity,
     'GET /activity/detail': queryDetail,
+    'POST /activity/uploadIMG': uploadIMG,
 }

@@ -53,7 +53,7 @@ var queryDetail = async (ctx, next) => {
  */
 
 var addActivity = async (ctx, next) => {
-    db.insert(ctx.request.body).then(res => {
+    await db.insert(ctx.request.body).then(res => {
         ctx.response.body = {
             code: 2000,
             result: res,

@@ -34,9 +34,13 @@ var queryDetail = async (ctx, next) => {
         _id: ObjectId(ctx.query.id)
     }
     await db.find(parmas).then(res => {
+        // 数据处理
+        const data = {}
+        data['esInformation'] = res[0]
+        data['mapPoint'] = res[0].mapPoint
         ctx.response.body = {
             code: 2000,
-            result: res,
+            result: data,
             msg:'查询活动成功'
         }
     }).catch(err=>{

@@ -7,7 +7,12 @@ const connectHistory = require('connect-history-api-fallback');
 var cors = require('koa2-cors')
 var files = fs.readdirSync(__dirname + '/controllers');
 const koaBody = require('koa-body');
+const static = require('koa-static')
 
+var serverAddress = {
+    host: '', // 服务器IP
+    port: ''
+}
 
 /**
  * 文件上传中间件
@@ -49,8 +54,10 @@ for (let file of js_files) {
  * 导入第三方库
  */
 app.use(cors())
-app.use(bodyParser())
-app.use(router.routes());
+app.use(bodyParser()) // post body解析
+app.use(router.routes()); //路由
+app.use(static('public'))  // 将public设置为静态可访问文件
+
 
 //vue-router mode history
 app.use(() => {
@@ -76,4 +83,8 @@ app.use(() => {
 // });
 
 
-app.listen(3001);
+const server = app.listen(3001, 'localhost', function () {
+    serverAddress.host = server.address().address
+    serverAddress.port = server.address().port
+})
+

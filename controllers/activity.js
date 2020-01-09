@@ -3,7 +3,8 @@ const db = require('../mongo').db.get('activityList')//链接到活动数据库
 const ObjectId = require('mongodb').ObjectID;
 const fs = require('fs')
 const path = require('path')
-
+var serverAddress = require('../index')
+console.log(serverAddress, serverAddress)
 /**
  * 获取活动列表
  * @param ctx

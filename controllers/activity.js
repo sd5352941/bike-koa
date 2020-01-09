@@ -3,8 +3,8 @@ const db = require('../mongo').db.get('activityList')//链接到活动数据库
 const ObjectId = require('mongodb').ObjectID;
 const fs = require('fs')
 const path = require('path')
-var serverAddress = require('../index')
-console.log(serverAddress, serverAddress)
+
+
 /**
  * 获取活动列表
  * @param ctx
@@ -87,9 +87,11 @@ var uploadIMG = async (ctx, next) => {
     let filePath = path.join(__dirname, '../public/upload/activityCover/') + fileName + `cover.jpg`;
     const upStream = fs.createWriteStream(filePath);
     reader.pipe(upStream);
+    // 图片存放地址
+    let imgPath = ctx.request.origin + '/upload/activityCover/' + fileName + `cover.jpg`
     ctx.response.body = {
         code: 2000,
-        path: filePath,
+        path: imgPath,
         msg:'添加图片成功'
     }
 }

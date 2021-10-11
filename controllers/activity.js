@@ -81,10 +81,10 @@ var uploadIMG = async (ctx, next) => {
     const file = ctx.request.files.file
     // 创建可读流
     const reader = fs.createReadStream(file.path);
+    const type = ctx.request.req.headers.filename
     // 更改存放文件名
     const fileName = new Buffer(file.name + new Date().getTime()).toString('base64')
-
-    let filePath = path.join(__dirname, '../public/upload/activityCover/') + fileName + `cover.jpg`;
+    let filePath = path.join(__dirname, `../public/upload/${type}/`) + fileName + `cover.jpg`;
     const upStream = fs.createWriteStream(filePath);
     reader.pipe(upStream);
     // 图片存放地址

@@ -11,7 +11,11 @@ var addUser = async (ctx, next) => {
     var body = {}
     await db.find(params).then(async res => {
         if (res.length === 0) {
-            await db.insert(ctx.request.body).then(res => {
+            let insertData = {
+                activities: [],
+                ...ctx.request.body
+            }
+            await db.insert(insertData).then(res => {
                 body = {
                     code: 2000,
                     result: res,
@@ -46,7 +50,8 @@ var userLogin = async (ctx, next) => {
                 ctx.body = {
                     code: 2000,
                     name: res[0].username,
-                    token: new Buffer.from(ctx.request.body.username + ctx.request.body.password).toString('base64'),
+                    // token: res[0]._id.toString(),
+                    token: new Buffer.from(res[0]._id.toString()).toString('base64'),
                     msg: '登陆成功'
                 }
             }else {

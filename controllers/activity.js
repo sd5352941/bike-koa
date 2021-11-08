@@ -1,16 +1,16 @@
 // const db = new Monk('localhost:27017/runoob').get('activityList');
 const db = require('../mongo').db.get('activityList')//链接到活动数据库
+const dbUser = require('../mongo').db.get('userData') //链接到用户数据库
 const ObjectId = require('mongodb').ObjectID;
 const fs = require('fs')
 const path = require('path')
-
 
 /**
  * 获取活动列表
  * @param ctx
  */
 
-var getActivity = async (ctx, next) => {
+const getActivity = async (ctx, next) => {
     // 获取翻页信息
     let page = {
         limit: Number(ctx.query.pageSize),
@@ -22,7 +22,6 @@ var getActivity = async (ctx, next) => {
             result: res
         }
     })
-    console.log('查询成功')
 }
 
 /**
@@ -30,11 +29,11 @@ var getActivity = async (ctx, next) => {
  * @param ctx
  */
 
-var queryDetail = async (ctx, next) => {
-    let parmas = {
+const queryDetail = async (ctx, next) => {
+    let params = {
         _id: ObjectId(ctx.query.id)
     }
-    await db.find(parmas).then(res => {
+    await db.find(params).then(res => {
         // 数据处理
         const data = {}
         data['esInformation'] = res[0]
@@ -57,7 +56,10 @@ var queryDetail = async (ctx, next) => {
  * @param ctx
  */
 
-var addActivity = async (ctx, next) => {
+const addActivity = async (ctx, next) => {
+    let insertData = ctx.request.body
+    insertData['userId'] = new Buffer.from(ctx.header.token,'base64').toString()
+    insertData['signUpUser'] = []
     await db.insert(ctx.request.body).then(res => {
         ctx.response.body = {
             code: 2000,
@@ -67,7 +69,8 @@ var addActivity = async (ctx, next) => {
     }).catch(err=>{
         ctx.response.body = {
             code: 4000,
-            msg:'添加失败,err:' + err
+            msg:'添加失败',
+            err
         }
     })
 }
@@ -77,7 +80,7 @@ var addActivity = async (ctx, next) => {
  * @param ctx
  */
 
-var uploadIMG = async (ctx, next) => {
+const uploadIMG = async (ctx, next) => {
     const file = ctx.request.files.file
     // 创建可读流
     const reader = fs.createReadStream(file.path);
@@ -88,7 +91,7 @@ var uploadIMG = async (ctx, next) => {
     const upStream = fs.createWriteStream(filePath);
     reader.pipe(upStream);
     // 图片存放地址
-    let imgPath = ctx.request.origin + '/upload/activityCover/' + fileName + `cover.jpg`
+    let imgPath = ctx.request.origin + `/upload/${type}/` + fileName + `cover.jpg`
     ctx.response.body = {
         code: 2000,
         path: imgPath,
@@ -96,10 +99,85 @@ var uploadIMG = async (ctx, next) => {
     }
 }
 
+function handleUserActivities(userParams,type,activity,acParams) {
+    dbUser.find(userParams).then(res=> {
+        let userData = res[0]
+        if(!userData['activities']) userData['activities'] = []
+
+        let fn = {
+            add: ()=> {
+                userData['activities'].push(activity)
+            },
+            remove: ()=> {
+                userData['activities'].splice(userData['activities'].findIndex(n=> n._id === activity._id),1)
+            }
+        }
+
+        fn[type]()
+        dbUser.update(userParams,userData) //用户列表更新活动
+
+    })
+}
+
+const signUpActivity = async (ctx, next) => {
+    let userId = new Buffer.from(ctx.header.token,'base64').toString()
+    let signUpData = ctx.request.body
+    let activityId = ObjectId(signUpData.activityId)
+    let params = {
+        _id: activityId
+    }
+    let userParams = {
+        _id: ObjectId(userId)
+    }
+
+
+    await db.find(params).then(res=> {
+        let update = res[0]
+        let type = ''
+        let index = update.signUpUser.findIndex((n)=> n.userId === userId)
+        const fn = {
+            signUp: ()=> {
+                update.signUpUser.push({
+                    userName: signUpData.userName,
+                    userId
+                })
+                type = 'add'
+
+            },
+            cancel: ()=> {
+                update.signUpUser.splice(index, 1);
+                type = 'remove'
+            }
+        }
+
+        index > -1 ? fn.cancel() : fn.signUp()
+
+        handleUserActivities(userParams,type,update,params)
+        let bodyMsg = {
+            remove: '已取消报名',
+            add: '报名成功'
+        }
+        db.update(params,update)
+        ctx.response.body = {
+            code: 2000,
+            msg: bodyMsg[type]
+        }
+    }).catch(err=> {
+        ctx.response.body = {
+            code: 4000,
+            msg: '报名失败，请联系管理员',
+            err,
+        }
+    })
+
+}
 
 module.exports = {
     'GET /activity/query': getActivity,
     'POST /activity/add': addActivity,
     'GET /activity/detail': queryDetail,
     'POST /activity/uploadIMG': uploadIMG,
+    'POST /activity/signUp': signUpActivity,
+
+
 }

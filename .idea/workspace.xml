@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3d16500-9c93-4606-9b95-41f031e5ad85" name="Default" comment="">
+    <list default="true" id="a3d16500-9c93-4606-9b95-41f031e5ad85" name="Default" comment="上传文件修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/activity.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/activity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +28,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -204,8 +213,39 @@
       <workItem from="1578878079261" duration="969000" />
       <workItem from="1633662016555" duration="1223000" />
       <workItem from="1633746615734" duration="7623000" />
-      <workItem from="1633837634312" duration="4605000" />
+      <workItem from="1633837634312" duration="7956000" />
+      <workItem from="1634008498640" duration="1188000" />
+      <workItem from="1634026788143" duration="1286000" />
+      <workItem from="1634091471224" duration="710000" />
+      <workItem from="1634268140722" duration="1078000" />
+      <workItem from="1634287272006" duration="1451000" />
+      <workItem from="1634355394221" duration="490000" />
+      <workItem from="1634442316108" duration="602000" />
+      <workItem from="1634525044098" duration="607000" />
+      <workItem from="1634610158075" duration="608000" />
+      <workItem from="1634711553357" duration="1067000" />
+      <workItem from="1634871473870" duration="2120000" />
+      <workItem from="1635052627839" duration="1376000" />
+      <workItem from="1635126693222" duration="1202000" />
+      <workItem from="1635296106435" duration="1199000" />
+      <workItem from="1635326779861" duration="907000" />
+      <workItem from="1635491364024" duration="1595000" />
+      <workItem from="1635667809251" duration="605000" />
+      <workItem from="1635729219930" duration="8730000" />
+      <workItem from="1635812353807" duration="2520000" />
+      <workItem from="1635917895626" duration="3150000" />
+      <workItem from="1635995804327" duration="4444000" />
+      <workItem from="1636082680182" duration="2177000" />
+      <workItem from="1636352021826" duration="8005000" />
     </task>
+    <task id="LOCAL-00001" summary="上传文件修改">
+      <created>1633936732842</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1633936732842</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -246,17 +286,21 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/controllers/activity.js</url>
-          <line>85</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="上传文件修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="上传文件修改" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/_koa-router@7.4.0@koa-router/lib/router.js" />

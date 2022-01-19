@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3d16500-9c93-4606-9b95-41f031e5ad85" name="Default" comment="上传文件修改">
+    <list default="true" id="a3d16500-9c93-4606-9b95-41f031e5ad85" name="Default" comment="报名系统">
+      <change afterPath="$PROJECT_DIR$/sessionKey.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/activity.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/activity.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +239,62 @@
       <workItem from="1635917895626" duration="3150000" />
       <workItem from="1635995804327" duration="4444000" />
       <workItem from="1636082680182" duration="2177000" />
-      <workItem from="1636352021826" duration="8005000" />
+      <workItem from="1636352021826" duration="9284000" />
+      <workItem from="1636696276445" duration="4253000" />
+      <workItem from="1636707817360" duration="336000" />
+      <workItem from="1636708224310" duration="1066000" />
+      <workItem from="1636943679986" duration="2416000" />
+      <workItem from="1636956955637" duration="2465000" />
+      <workItem from="1637031312107" duration="798000" />
+      <workItem from="1637141949952" duration="637000" />
+      <workItem from="1637154281367" duration="541000" />
+      <workItem from="1637202523955" duration="594000" />
+      <workItem from="1637293866585" duration="8936000" />
+      <workItem from="1637333177298" duration="1484000" />
+      <workItem from="1637394233990" duration="1197000" />
+      <workItem from="1637560521734" duration="3191000" />
+      <workItem from="1637642453199" duration="3442000" />
+      <workItem from="1637731924647" duration="2468000" />
+      <workItem from="1637811118906" duration="1193000" />
+      <workItem from="1638160333547" duration="868000" />
+      <workItem from="1638243532685" duration="682000" />
+      <workItem from="1638337322474" duration="594000" />
+      <workItem from="1638506019596" duration="295000" />
+      <workItem from="1638535136126" duration="642000" />
+      <workItem from="1638679476281" duration="652000" />
+      <workItem from="1638888118869" duration="1863000" />
+      <workItem from="1638934706311" duration="4682000" />
+      <workItem from="1639048410188" duration="309000" />
+      <workItem from="1639115004922" duration="769000" />
+      <workItem from="1639278577346" duration="829000" />
+      <workItem from="1639374710804" duration="3317000" />
+      <workItem from="1639539652494" duration="2969000" />
+      <workItem from="1639630904176" duration="2848000" />
+      <workItem from="1639704981924" duration="2274000" />
+      <workItem from="1639733005173" duration="1177000" />
+      <workItem from="1639747429537" duration="3021000" />
+      <workItem from="1639977778386" duration="765000" />
+      <workItem from="1640059555517" duration="594000" />
+      <workItem from="1640596634438" duration="592000" />
+      <workItem from="1640655705609" duration="2858000" />
+      <workItem from="1640752517373" duration="1326000" />
+      <workItem from="1640913478348" duration="600000" />
+      <workItem from="1641793083914" duration="3459000" />
+      <workItem from="1641805319529" duration="11674000" />
+      <workItem from="1641872402066" duration="3817000" />
+      <workItem from="1641887385076" duration="10510000" />
+      <workItem from="1641957648861" duration="1330000" />
+      <workItem from="1641976172575" duration="609000" />
+      <workItem from="1641992004234" duration="641000" />
+      <workItem from="1642058770960" duration="7580000" />
+      <workItem from="1642082243837" duration="2950000" />
+      <workItem from="1642129212111" duration="4847000" />
+      <workItem from="1642178702121" duration="2056000" />
+      <workItem from="1642307172671" duration="772000" />
+      <workItem from="1642308564780" duration="4478000" />
+      <workItem from="1642393817902" duration="6597000" />
+      <workItem from="1642479963322" duration="2611000" />
+      <workItem from="1642513506739" duration="716000" />
     </task>
     <task id="LOCAL-00001" summary="上传文件修改">
       <created>1633936732842</created>
@@ -245,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633936732842</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="报名系统">
+      <created>1636361252904</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1636361252904</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -300,7 +365,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="上传文件修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="上传文件修改" />
+    <MESSAGE value="报名系统" />
+    <option name="LAST_COMMIT_MESSAGE" value="报名系统" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/_koa-router@7.4.0@koa-router/lib/router.js" />

@@ -9,9 +9,10 @@ var files = fs.readdirSync(__dirname + '/controllers');
 const koaBody = require('koa-body');
 const static = require('koa-static')
 
+
 var serverAddress = {
-    host: '', // 服务器IP
-    port: ''
+    host: 'http://175.168.40.9', // 服务器IP
+    port: '3001'
 }
 
 /**
@@ -24,6 +25,34 @@ app.use(koaBody({
     }
 }));
 
+
+router.use('/*',async (ctx, next) => {
+    /**
+     *  token解析
+     */
+    if(ctx.request.method === 'GET') {
+        await next()
+        return false
+    }
+    if(ctx.header.token) {
+        let time = 7 * 24 * 24 * 60 * 1000
+        let tokenStr = new Buffer.from(ctx.header.token,'base64').toString()
+        let tokenArr = tokenStr.split(',')
+        let sessionTime = tokenArr[1] + time
+
+
+        if(Date.parse(new Date()) > sessionTime) {
+            ctx.response.body = {
+                code: 4002,
+                msg: '登陆已过期，请重新登录'
+            }
+        } else {
+            await next()
+        }
+    } else {
+        await next()
+    }
+})
 
 /**
  * router动态加入cantrollers js文件
@@ -50,27 +79,31 @@ for (let file of js_files) {
 }
 
 
+
+
+//vue-router mode history
+// app.use(() => {
+//     const middleware = connectHistory();
+//     const noop = ()  => {
+//
+//     };
+//     return async (ctx, next)=> {
+//         middleware(ctx, null, noop);
+//         await next();
+//     };
+// });
+
+
 /**
  * 导入第三方库
  */
 app.use(cors())
 app.use(bodyParser()) // post body解析
-app.use(router.routes()); //路由
+app.use(router.routes()).use(router.allowedMethods()); //路由
 app.use(static('public'))  // 将public设置为静态可访问文件
 
 
-//vue-router mode history
-app.use(() => {
-    const middleware = connectHistory();
-    const noop = ()  => {
 
-    };
-
-    return async (ctx, next)=> {
-        middleware(ctx, null, noop);
-        await next();
-    };
-});
 
 
 // x-respogjgknse-time
@@ -83,8 +116,5 @@ app.use(() => {
 // });
 
 
-const server = app.listen(3001, 'localhost', function () {
-    serverAddress.host = server.address().address
-    serverAddress.port = server.address().port
-})
+const server = app.listen(3001 )
 
